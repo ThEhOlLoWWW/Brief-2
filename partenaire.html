@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Rejoignez le réseau Taawon : inscrivez votre coopérative artisanale marocaine et faites découvrir votre savoir-faire."
+    />
+    <title>Devenir Partenaire</title>
 
     <link
       rel="stylesheet"
@@ -32,6 +36,190 @@
         </div>
       </nav>
     </header>
+
+    <main>
+      <section class="hero">
+        <a href="index.html">Acceuil</a>
+        <span>/</span>
+        <span>Devenir Partenaire</span>
+        <div class="hero-content">
+          <div class="hero-text">
+            <p>COOPERATIVES, REJOIGNEZ TAAWOON</p>
+            <h1>Votre Savoir Faire Métrie d'etre découvert</h1>
+            <p>
+              Faites connaître votre atelier, racontez votre histoire et créez
+              de nouveaux liens. Nous construisons avec vous une présence fidèle
+              à votre coopérative.
+            </p>
+            <ul>
+              <li>Une page dédiée à votre coopérative</li>
+              <li>Vos créations et vos savoir-faire mis en lumière</li>
+              <li>Un contact direct avec les personnes intéressées</li>
+            </ul>
+          </div>
+          <div class="hero-image">
+            <img src="/" alt="/" />
+          </div>
+        </div>
+      </section>
+      <section class="form">
+        <div class="small-titles">
+          <h2>Demande d'adhésion</h2>
+          <p>Champs Obligatoir</p>
+        </div>
+        <form action="#" method="POST">
+          <fieldset class="form-card">
+            <legend class="form-header">Votre Coopérative</legend>
+            <p>L'identité de votre structure et son implantation</p>
+
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="nom">Nom de la coopérative *</label>
+                <input
+                  type="text"
+                  name="nom"
+                  id="nom"
+                  placeholder="Ex. Coopératives Atlas"
+                  required
+                />
+                <p>indiquez le nom de votre documents officiels</p>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="annee">Année de creation *</label>
+                  <input
+                    type="number"
+                    name="annee"
+                    id="annee"
+                    placeholder="Ex. 2008"
+                    required
+                    min="1900"
+                    max="2026"
+                  />
+                  <p>Une année a 4 chiffres</p>
+                </div>
+                <div class="form-group">
+                  <label for="membres">Nombres des membres *</label>
+                  <input
+                    type="number"
+                    name="membres"
+                    id="membres"
+                    placeholder="Ex. 24"
+                    required
+                    min="1"
+                  />
+                  <p>Nbre entiers superieur à 0</p>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="ville">Villes ou commune *</label>
+                  <input
+                    type="text"
+                    name="ville"
+                    id="ville"
+                    placeholder="Ex. Taznaght"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="region">Regions *</label>
+                  <select name="region" id="region" required>
+                    <option value="">Sélectionnez votre région</option>
+                    <option value="oriental">L'Oriental</option>
+                    <option value="souss-massa">Souss-Massa</option>
+                    <option value="marrakech-safi">Marrakech-Safi</option>
+                    <option value="fes-meknes">Fès-Meknès</option>
+                    <option value="draa-tafilalet">Drâa-Tafilalet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="adresse">Adresse de l'ateliers *</label>
+                <input
+                  type="text"
+                  name="adresse"
+                  id="adresse"
+                  placeholder="Run, quartier, commune et code postal"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-footer">
+            <div class="form-consent">
+              <label for="consent">
+                J’accepte que Taawon utilise ces informations pour étudier ma
+                demande et me recontacter. J’ai lu la politique de
+                confidentialité. *
+              </label>
+              <input type="checkbox" name="consent" id="consent" required />
+            </div>
+            <p>
+              Votre accord est nécessaire pour envoyer la demande. Vos
+              informations ne sont pas publiées automatiquement.
+            </p>
+            <button type="submit">Envoyer ma demande</button>
+            <p>
+              L’envoi d’une demande ne vaut pas adhésion. Notre équipe prendra
+              contact avec vous pour échanger sur votre activité et les
+              prochaines étapes.
+            </p>
+          </div>
+        </form>
+      </section>
+      <section class="faq">
+        <h2>Questions fréquentes</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span>Quelles coopératives peuvent rejoindre Taawon ?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Toutes les coopératives artisanales marocaines officiellement
+              reconnues, quelle que soit leur taille ou leur région, peuvent
+              soumettre une demande d'adhésion.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Faut-il déjà disposer d'un site internet ?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Non, Taawon vous crée justement une page dédiée pour présenter
+              votre histoire, votre atelier et vos créations.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Quels sont les frais ou les conditions d'adhésion ?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              L'inscription et la mise en ligne de votre page sont accompagnées
+              par notre association sans frais cachés.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Comment se prépare la page de notre coopérative ?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Notre équipe vous contacte après réception de votre demande pour
+              recueillir votre histoire, vos photos et vos créations.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p>© 2026 Taawon. Tous droits réservés.</p>
