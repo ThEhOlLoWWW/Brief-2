@@ -9,10 +9,26 @@
     />
     <title>Devenir Partenaire</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Inter", sans-serif;
+        --color-brand-50: #eaf4ef;
+        --color-brand-700: #12664f;
+        --color-page: #f7f7f5;
+        --color-btn: #17654f;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -38,55 +54,83 @@
     </header>
 
     <main>
-      <section class="hero">
-        <a href="index.html">Acceuil</a>
-        <span>/</span>
-        <span>Devenir Partenaire</span>
-        <div class="hero-content">
-          <div class="hero-text">
-            <p>COOPERATIVES, REJOIGNEZ TAAWOON</p>
-            <h1>Votre Savoir Faire Métrie d'etre découvert</h1>
-            <p>
-              Faites connaître votre atelier, racontez votre histoire et créez
-              de nouveaux liens. Nous construisons avec vous une présence fidèle
-              à votre coopérative.
-            </p>
-            <ul>
-              <li>Une page dédiée à votre coopérative</li>
-              <li>Vos créations et vos savoir-faire mis en lumière</li>
-              <li>Un contact direct avec les personnes intéressées</li>
-            </ul>
-          </div>
-          <div class="hero-image">
-            <img src="/" alt="/" />
+      <section class="bg-brand-50">
+        <div class="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
+          <nav
+            aria-label="Fil d'Ariane"
+            class="mb-4 flex items-center text-xs gap-2 text-gray-500"
+          >
+            <a href="index.html" class="hover:underline">Accueil</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Devenir partenaire</span>
+          </nav>
+          <div class="grid gap-8 lg:grid-cols-[5fr_3fr] lg:gap-12">
+            <div class="hero-text">
+              <p
+                class="text-xs font-bold uppercase text-brand-700 tracking-wide"
+              >
+                COOPÉRATIVES, REJOIGNEZ TAAWON
+              </p>
+              <h1
+                class="mt-3 max-w-xl text-4xl font-bold leading-tight text-brand-700 md:text-5xl"
+              >
+                Votre savoir-faire mérite d’être découvert.
+              </h1>
+              <p class="mt-5 max-w-xl text-gray-500 leading-relaxed">
+                Faites connaître votre atelier, racontez votre histoire et créez
+                de nouveaux liens. Nous construisons avec vous une présence
+                fidèle à votre coopérative.
+              </p>
+              <ul class="text-sm space-y-2 mt-6 text-gray-800">
+                <li>Une page dédiée à votre coopérative</li>
+                <li>Vos créations et vos savoir-faire mis en lumière</li>
+                <li>Un contact direct avec les personnes intéressées</li>
+              </ul>
+            </div>
+            <div class="hero-image">
+              <img src="/assets/images/Photography.png" alt="/" />
+            </div>
           </div>
         </div>
       </section>
-      <section class="form">
-        <div class="small-titles">
-          <h2>Demande d'adhésion</h2>
-          <p>Champs Obligatoir</p>
+      <section class="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+        <div class="flex justify-between items-centre">
+          <h2 class="text-xl font-bold text-gray-800">Demande d'adhésion</h2>
+          <p class="text-xs text-gray-600">* Champs obligatoires</p>
         </div>
-        <form action="#" method="POST">
-          <fieldset class="form-card">
-            <legend class="form-header">Votre Coopérative</legend>
-            <p>L'identité de votre structure et son implantation</p>
+        <form action="#" method="POST" class="mt-6">
+          <fieldset class="border rounded-xl p-6 border-gray-200 bg-white">
+            <legend
+              class="float-left w-full text-lg text-brand-700 bold mb-2 font-bold"
+            >
+              Votre Coopérative
+            </legend>
+            <p class="clear-both text-sm text-gray-500">
+              L'identité de votre structure et son implantation
+            </p>
 
-            <div class="form-fields">
+            <div class="mt-6 space-y-5">
               <div class="form-group">
-                <label for="nom">Nom de la coopérative *</label>
+                <label for="nom" class="block text-sm text-gray-800"
+                  >Nom de la coopérative *</label
+                >
                 <input
                   type="text"
                   name="nom"
                   id="nom"
-                  placeholder="Ex. Coopératives Atlas"
+                  placeholder="Ex. Coopérative Atlas"
                   required
+                  class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
                 />
-                <p>indiquez le nom de votre documents officiels</p>
+                <p class="mt-2 text-xs text-gray-500">
+                  Indiquez le nom utilisé dans vos documents officiels
+                </p>
               </div>
-              <div class="form-row">
+              <div class="grid gap-5 sm:grid-cols-2">
                 <div class="form-group">
-                  <label for="annee">Année de creation *</label>
+                  <label for="annee" class="block text-sm text-gray-800"
+                    >Année de création *</label
+                  >
                   <input
                     type="number"
                     name="annee"
@@ -95,11 +139,16 @@
                     required
                     min="1900"
                     max="2026"
+                    class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
                   />
-                  <p>Une année a 4 chiffres</p>
+                  <p class="mt-2 text-xs text-gray-500">
+                    Une année a 4 chiffres
+                  </p>
                 </div>
                 <div class="form-group">
-                  <label for="membres">Nombres des membres *</label>
+                  <label for="membres" class="block text-sm text-gray-800"
+                    >Nombre de membres *</label
+                  >
                   <input
                     type="number"
                     name="membres"
@@ -107,24 +156,37 @@
                     placeholder="Ex. 24"
                     required
                     min="1"
+                    class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
                   />
-                  <p>Nbre entiers superieur à 0</p>
+                  <p class="mt-2 text-xs text-gray-500">
+                    Un nombre entier supérieur à 0
+                  </p>
                 </div>
               </div>
-              <div class="form-row">
+              <div class="class= grid gap-5 sm:grid-cols-2">
                 <div class="form-group">
-                  <label for="ville">Villes ou commune *</label>
+                  <label for="ville" class="block text-sm text-gray-800"
+                    >Ville ou commune *</label
+                  >
                   <input
                     type="text"
                     name="ville"
                     id="ville"
                     placeholder="Ex. Taznaght"
                     required
+                    class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="region">Regions *</label>
-                  <select name="region" id="region" required>
+                  <label for="region" class="block text-sm text-gray-800"
+                    >Regions *</label
+                  >
+                  <select
+                    name="region"
+                    id="region"
+                    required
+                    class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
+                  >
                     <option value="">Sélectionnez votre région</option>
                     <option value="oriental">L'Oriental</option>
                     <option value="souss-massa">Souss-Massa</option>
@@ -135,33 +197,41 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="adresse">Adresse de l'ateliers *</label>
+                <label for="adresse" class="block text-sm text-gray-800"
+                  >Adresse de l’atelier *</label
+                >
                 <input
                   type="text"
                   name="adresse"
                   id="adresse"
                   placeholder="Run, quartier, commune et code postal"
                   required
+                  class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
                 />
               </div>
             </div>
           </fieldset>
 
           <div class="form-footer">
-            <div class="form-consent">
-              <label for="consent">
+            <div class="flex my-6 gap-5">
+              <input type="checkbox" name="consent" id="consent" required />
+              <label for="consent" class="text-gray-800 text-sm">
                 J’accepte que Taawon utilise ces informations pour étudier ma
                 demande et me recontacter. J’ai lu la politique de
                 confidentialité. *
               </label>
-              <input type="checkbox" name="consent" id="consent" required />
             </div>
-            <p>
+            <p class="text-sm text-gray-500">
               Votre accord est nécessaire pour envoyer la demande. Vos
               informations ne sont pas publiées automatiquement.
             </p>
-            <button type="submit">Envoyer ma demande</button>
-            <p>
+            <button
+              type="submit"
+              class="bg-btn text-white px-8 py-2 rounded-lg text-lg my-6"
+            >
+              Envoyer ma demande
+            </button>
+            <p class="text-sm text-gray-500">
               L’envoi d’une demande ne vaut pas adhésion. Notre équipe prendra
               contact avec vous pour échanger sur votre activité et les
               prochaines étapes.
@@ -169,50 +239,58 @@
           </div>
         </form>
       </section>
-      <section class="faq">
-        <h2>Questions fréquentes</h2>
+      <section class="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+        <h2 class="text-xl font-bold text-gray-800">Questions fréquentes</h2>
 
         <div class="faq-list">
-          <details class="faq-item">
-            <summary>
+          <details
+            class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
+          >
+            <summary class="flex justify-between">
               <span>Quelles coopératives peuvent rejoindre Taawon ?</span>
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </summary>
-            <p>
+            <p class="mt-4 text-gray-500">
               Toutes les coopératives artisanales marocaines officiellement
               reconnues, quelle que soit leur taille ou leur région, peuvent
               soumettre une demande d'adhésion.
             </p>
           </details>
 
-          <details class="faq-item">
-            <summary>
+          <details
+            class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
+          >
+            <summary class="flex justify-between">
               <span>Faut-il déjà disposer d'un site internet ?</span>
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </summary>
-            <p>
+            <p class="mt-4 text-gray-500">
               Non, Taawon vous crée justement une page dédiée pour présenter
               votre histoire, votre atelier et vos créations.
             </p>
           </details>
 
-          <details class="faq-item">
-            <summary>
+          <details
+            class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
+          >
+            <summary class="flex justify-between">
               <span>Quels sont les frais ou les conditions d'adhésion ?</span>
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </summary>
-            <p>
+            <p class="mt-4 text-gray-500">
               L'inscription et la mise en ligne de votre page sont accompagnées
               par notre association sans frais cachés.
             </p>
           </details>
 
-          <details class="faq-item">
-            <summary>
+          <details
+            class="w-full mt-2 px-4 py-3 border rounded-xl text-sm border-gray-200"
+          >
+            <summary class="flex justify-between">
               <span>Comment se prépare la page de notre coopérative ?</span>
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </summary>
-            <p>
+            <p class="mt-4 text-gray-500">
               Notre équipe vous contacte après réception de votre demande pour
               recueillir votre histoire, vos photos et vos créations.
             </p>
