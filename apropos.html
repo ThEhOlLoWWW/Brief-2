@@ -7,32 +7,49 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>Document</title>
   </head>
   <body>
-    <header >
-      <nav class="flex items-center justify-between mt-1 bg-red-500 px-5 py-4">
+    <header class="sticky top-0 z-50" >
+      <nav class="flex items-center justify-between mt-1 bg-white shadow-md px-5 py-4 sticky z-50  text-base font-medium uppercase tracking-widest">
         <div>
           <a href="index.html">
             <img src="logo.png" alt="Logo" />
           </a>
         </div>
 
-        <ul class="flex items-center gap-6">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="partenaire.html">Partenaire</a></li>
-          <li><a href="cooperatives.html">Coopérative</a></li>
-          <li><a href="apropos.html">A prepos</a></li>
-        </ul>
+<!-- Menu téléphone -->
+<details class="relative md:hidden">
+  <summary class="cursor-pointer list-none text-2xl" aria-label="Ouvrir le menu">
+    ☰
+  </summary>
+
+  <ul class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg">
+    <li><a href="index.html" class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300">Accueil</a></li>
+    <li><a href="partenaire.html" class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300">Partenaire</a></li>
+    <li><a href="cooperatives.html" class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300">Coopérative</a></li>
+    <li><a href="apropos.html" class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300">À propos</a></li>
+  </ul>
+</details>
+
+<!-- Menu ordinateur -->
+<ul class="hidden items-center gap-6 text-black md:flex">
+  <li><a href="index.html" class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300">Accueil</a></li>
+  <li><a href="partenaire.html" class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300">Partenaire</a></li>
+  <li><a href="cooperatives.html" class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300">Coopérative</a></li>
+  <li><a href="apropos.html" class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300">À propos</a></li>
+</ul>
 
         <div class="flex items-center gap-4">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-green-300 transition duration-300"></i>
+          <i class="fa-solid fa-user cursor-pointer hover:text-green-300 transition duration-300"></i>
         </div>
       </nav>
     </header>
 
-    <div class="flex">
+    <div class="flex mt-5 pt-5">
       <a class="me-2" href="index.html"><p>Aceuil</p></a>
       <p>/ Missions</p>
     </div>
@@ -53,15 +70,15 @@
       </div>
     </section>
     
-    <section>
-        <div>
+    <section class="bg-gray-200/70">
+        <div >
         <p>NOTRE CHEMIN</p>
         <h1>Une histoire qui se tisse ensemble</h1>
         </div>
-        <div>
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between m-2 p-5 mb-3 h-50 ">
           <div>
-            <h3>2021</h3>
-            <hr width="130" align="left">
+            <h3 class="text-green-500 text-3xl font-semibold">2021</h3>
+            <hr class="w-48 border-black mt-4">
             <h4>Les premières rencontres</h4>
             <p>Le projet prend forme au fil des échanges avec des coopératives du Sud marocain.</p>
           </div>
@@ -85,13 +102,13 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="">
         <div>
           <p>L’équipe Taawon</p>
           <h1>Des personnes engagées, à vos côtés</h1>
           <p>Une équipe qui partage la même envie : faire connaître les talents et rapprocher les communautés.</p>
         </div>
-        <div>
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <img src="#" alt="">
             <h4>Salma El Amrani</h4>
@@ -123,10 +140,10 @@
       </section>
 
 
-    <footer>
+    <footer class="flex items-center justify-between bg-green-900 px-5 py-4 text-white">
       <p>© 2026 Taawon. Tous droits réservés.</p>
 
-      <div class="social-media">
+      <div class="social-media flex gap-5">
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-tiktok"></i></a>
