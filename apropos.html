@@ -7,8 +7,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <style type="text/tailwindcss">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
       @theme {
         --font-sans: "Inter", sans-serif;
         --color-brand-50: #eaf4ef;
@@ -22,139 +22,313 @@
     <title>Document</title>
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans antialiased">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex-shrink-0">
-                <a href="index.html"> 
-                    <img src="assets/images/taawon_logo.png" alt="Logo" class="h-12 w-auto" />
-                </a>
-            </div>
-            <details class="relative md:hidden">
-  <summary class="cursor-pointer list-none text-2xl " aria-label="Ouvrir le menu">
-    ☰
-  </summary>
-  <!-- mnobile version -->
-   <ul class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg">
-                <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
-                <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
-                <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
-                <li><a href="apropos.html" class="hover:text-amber-600 transition">A prepos</a></li>
-            </ul>
-     </details>     
-<!-- ordinateur version -->
-            <ul class="hidden md:flex space-x-8 font-medium text-gray-600">
-                <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
-                <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
-                <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
-                <li><a href="apropos.html" class="hover:text-amber-600 transition">A prepos</a></li>
-            </ul>
+    <header class="sticky top-0 z-50">
+      <nav
+        class="flex items-center justify-between mt-1 bg-white shadow-md px-5 py-4 sticky z-50 text-base font-medium uppercase tracking-widest"
+      >
+        <div>
+          <a href="index.html">
+            <img src="assets/images/taawon_logo.webp" alt="Logo" />
+          </a>
+        </div>
 
-            <div class="flex items-center space-x-5 text-gray-600 text-lg">
-                <button class="hover:text-amber-400 transition"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="hover:text-amber-400 transition"><i class="fa-solid fa-user"></i></button>
-            </div>
-        </nav>
+        <!-- Menu téléphone -->
+        <details class="relative md:hidden">
+          <summary
+            class="cursor-pointer list-none text-2xl"
+            aria-label="Ouvrir le menu"
+          >
+            ☰
+          </summary>
+
+          <ul
+            class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="partenaire.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Partenaire</a
+              >
+            </li>
+            <li>
+              <a
+                href="cooperatives.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Coopératives</a
+              >
+            </li>
+            <li>
+              <a
+                href="apropos.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >À propos</a
+              >
+            </li>
+          </ul>
+        </details>
+
+        <!-- Menu ordinateur -->
+        <ul class="hidden items-center gap-6 text-black md:flex">
+          <li>
+            <a
+              href="index.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="partenaire.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Partenaire</a
+            >
+          </li>
+          <li>
+            <a
+              href="cooperatives.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Coopératives</a
+            >
+          </li>
+          <li>
+            <a
+              href="apropos.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >À propos</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <i
+            class="fa-solid fa-magnifying-glass cursor-pointer hover:text-green-300 transition duration-300"
+          ></i>
+          <i
+            class="fa-solid fa-user cursor-pointer hover:text-green-300 transition duration-300"
+          ></i>
+        </div>
+      </nav>
     </header>
 
     <div class="flex justify-content-between p-4">
-      <a class="me-2 text-green-800 text-light hover:text-green-500 transition-colors duration-300 "  href="index.html">Acceuil</a>
+      <a
+        class="me-2 text-green-800 text-light hover:text-green-500 transition-colors duration-300"
+        href="index.html"
+        >Acceuil</a
+      >
       <p class="text-danger-500">/ Missions</p>
     </div>
-    <section class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between px-4 bg-brand-50 py-6 ">
+    <section
+      class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between px-4 bg-brand-50 py-6"
+    >
       <div>
-        <p class="text-green-800 mb-8 font-bold ">MISSION ET IMPACT</p>
-        <h1 class="text-green-800 text-5xl mb-6 font-bold  ">Faire vivre les savoir-faire.Faire grandir les liens.</h1>
-        <p class="text-justify mb-4 ">Taawon relie les coopératives artisanales marocaines à celles et ceux qui veulent
-        découvrir leurs créations. Notre mission : rendre leurs savoir-faire plus visibles,
-        encourager une rémunération juste et soutenir une économie locale qui profite aux communautés.</p>
-        <p class="text-justify mb-5 text-gray-500 text-sm">« Taawon » signifie entraide. C’est le fil conducteur de notre projet : 
-          avancer avec les coopératives, à leur rythme, sans séparer les objets des personnes qui 
-          leur donnent vie.</p>
-          <a href="cooperatives.html" class="bg-emerald-700 border-1 border-gray-500 rounded-lg px-4 py-2 text-white text-sm hover:bg-emerald-900 transition duration-500">Rencontrer les coopératives</a>
+        <p class="text-green-800 mb-8 font-bold">MISSION ET IMPACT</p>
+        <h1 class="text-green-800 text-5xl mb-6 font-bold">
+          Faire vivre les savoir-faire.Faire grandir les liens.
+        </h1>
+        <p class="text-justify mb-4">
+          Taawon relie les coopératives artisanales marocaines à celles et ceux
+          qui veulent découvrir leurs créations. Notre mission : rendre leurs
+          savoir-faire plus visibles, encourager une rémunération juste et
+          soutenir une économie locale qui profite aux communautés.
+        </p>
+        <p class="text-justify mb-5 text-gray-500 text-sm">
+          « Taawon » signifie entraide. C’est le fil conducteur de notre projet
+          : avancer avec les coopératives, à leur rythme, sans séparer les
+          objets des personnes qui leur donnent vie.
+        </p>
+        <a
+          href="cooperatives.html"
+          class="bg-emerald-700 border-1 border-gray-500 rounded-lg px-4 py-2 text-white text-sm hover:bg-emerald-900 transition duration-500"
+          >Rencontrer les coopératives</a
+        >
       </div>
       <div>
-        <img src="assets/New folder/aprepos.jpg" alt=""  class="w-300 h-80 object-cover rounded-lg">
+        <img
+          src="assets/New folder/aprepos.jpg"
+          alt=""
+          class="w-300 h-80 object-cover rounded-lg"
+        />
       </div>
     </section>
-    
-    <section class="p-4 ">
-        <div >
+
+    <section class="p-4">
+      <div>
         <p class="text-sm text-brand-700 font-bold">NOTRE CHEMIN</p>
-        <h1 class="text-2xl font-bold text-brand-700 pt-4">Une histoire qui se tisse ensemble</h1>
+        <h1 class="text-2xl font-bold text-brand-700 pt-4">
+          Une histoire qui se tisse ensemble
+        </h1>
+      </div>
+      <div
+        class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mx-4 mb-7 me-auto pt-4"
+      >
+        <div class="max-w-xs">
+          <h3 class="text-brand-700 text-2xl font-semibold">2021</h3>
+          <hr class="w-48 border-brand-700 border-1 mt-4 rounded-lg" />
+          <h4 class="text-lg font-bold py-3">Les premières rencontres</h4>
+          <p class="text-gray-500 text-sm">
+            Le projet prend forme au fil des échanges avec des coopératives du
+            Sud marocain.
+          </p>
         </div>
-        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mx-4 mb-7 me-auto pt-4  ">
-          <div class="max-w-xs">
-            <h3 class="text-brand-700 text-2xl font-semibold">2021</h3>
-            <hr class="w-48 border-brand-700 border-1 mt-4 rounded-lg ">
-            <h4 class="text-lg font-bold py-3">Les premières rencontres</h4>
-            <p class="text-gray-500 text-sm ">Le projet prend forme au fil des échanges avec des coopératives du Sud marocain.</p>
-          </div>
-          <div class="max-w-xs">
-            <h3 class="text-brand-700 text-2xl font-semibold">2022</h3>
-            <hr class="w-48 border-brand-700 border-1 mt-4 rounded-lg ">
-            <h4 class="text-lg font-bold py-3">Un annuaire commun</h4>
-            <p class="text-gray-500 text-sm ">Les premiers ateliers partagent leurs histoires, leurs contacts et leurs créations.</p>
-          </div>
-          <div class="max-w-xs">
-            <h3 class="text-brand-700 text-2xl font-semibold">2024</h3>
-            <hr class="w-48 border-brand-700 border-1 mt-4 rounded-lg ">
-            <h4 class="text-lg font-bold py-3">Des liens dans tout le Maroc</h4>
-            <p class="text-gray-500 text-sm ">Le réseau s’ouvre aux 12 régions et à une plus grande diversité de métiers.</p>
-          </div>
-          <div class="max-w-xs">
-            <h3 class="text-brand-700 text-2xl font-semibold">2026</h3>
-            <hr class="w-48 border-brand-700 border-1 mt-4 rounded-lg ">
-            <h4 class="text-lg font-bold py-3">Continuer, ensemble</h4>
-            <p class="text-gray-500 text-sm ">Taawon accompagne la découverte de plus de 150 coopératives et prépare la suite avec elles.</p>
-          </div>
+        <div class="max-w-xs">
+          <h3 class="text-brand-700 text-2xl font-semibold">2022</h3>
+          <hr class="w-48 border-brand-700 border-1 mt-4 rounded-lg" />
+          <h4 class="text-lg font-bold py-3">Un annuaire commun</h4>
+          <p class="text-gray-500 text-sm">
+            Les premiers ateliers partagent leurs histoires, leurs contacts et
+            leurs créations.
+          </p>
         </div>
-      </section>
-      <section class="bg-brand-50 px-8 pt-6">
-        <div>
-          <p class="text-sm text-brand-700 font-bold">L’équipe Taawon</p>
-          <h1 class="text-2xl font-bold text-brand-700 pt-4 ">Des personnes engagées, à vos côtés</h1>
-          <p class="text-sm text-gray-500 py-2">Une équipe qui partage la même envie : faire connaître les talents et rapprocher les communautés.</p>
+        <div class="max-w-xs">
+          <h3 class="text-brand-700 text-2xl font-semibold">2024</h3>
+          <hr class="w-48 border-brand-700 border-1 mt-4 rounded-lg" />
+          <h4 class="text-lg font-bold py-3">Des liens dans tout le Maroc</h4>
+          <p class="text-gray-500 text-sm">
+            Le réseau s’ouvre aux 12 régions et à une plus grande diversité de
+            métiers.
+          </p>
         </div>
-        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between  py-4">
-          <div class="shadow-lg rounded-xl ">
-            <img src="assets/New folder/salma.jpg" alt="" class="h-60 w-full object-cover shadow-lg rounded-t-xl">
-            <h4 class="text-lg font-bold pt-4 px-3">Salma El Amrani</h4>
-            <h5 class="text-brand-700 text-sm pt-4 px-3">Coordination du réseau</h5>
-            <p class="text-sm text-gray-500 py-2 px-3 pb-5">À l’écoute des coopératives, Salma construit des liens durables entre les ateliers et Taawon.</p>
-          </div>
-          <div class="shadow-lg rounded-xl">
-            <img src="assets/New folder/youssef.jpg" alt="" class="h-60 w-full object-cover shadow-lg rounded-t-xl">
-            <h4 class="text-lg font-bold pt-4 px-3">Youssef Bennani</h4>
-            <h5 class="text-brand-700 text-sm pt-4 px-3">Accompagnement des coopératives</h5>
-            <p class="text-sm text-gray-500 py-2 px-3 pb-5">Youssef accompagne les ateliers pour présenter leurs métiers et raconter leurs créations.</p>
-          </div>
-          <div class="shadow-lg rounded-xl">
-            <img src="assets/New folder/nadia.jpg" alt="" class="h-60 w-full  object-cover shadow-lg rounded-t-xl">
-            <h4 class="text-lg font-bold pt-4 px-3">Nadia Aït Lahcen</h4>
-            <h5  class="text-brand-700 text-sm pt-4 px-3">Contenus & transmission</h5>
-            <p class="text-sm text-gray-500 py-2 px-3 pb-5" >Nadia donne une voix aux histoires et aux gestes qui font la richesse de notre patrimoine.</p>
-          </div>
+        <div class="max-w-xs">
+          <h3 class="text-brand-700 text-2xl font-semibold">2026</h3>
+          <hr class="w-48 border-brand-700 border-1 mt-4 rounded-lg" />
+          <h4 class="text-lg font-bold py-3">Continuer, ensemble</h4>
+          <p class="text-gray-500 text-sm">
+            Taawon accompagne la découverte de plus de 150 coopératives et
+            prépare la suite avec elles.
+          </p>
         </div>
-      </section>
-      <section class="px-8 pt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between  py-4">
-        <div class="">
-          <h2 class="text-2xl font-bold text-brand-700 pt-4">Et si nous écrivions la suite ensemble ?</h2>
-          <p class="text-sm text-gray-500 ">Vous représentez une coopérative ? Partageons votre histoire avec le réseau.</p>
+      </div>
+    </section>
+    <section class="bg-brand-50 px-8 pt-6">
+      <div>
+        <p class="text-sm text-brand-700 font-bold">L’équipe Taawon</p>
+        <h1 class="text-2xl font-bold text-brand-700 pt-4">
+          Des personnes engagées, à vos côtés
+        </h1>
+        <p class="text-sm text-gray-500 py-2">
+          Une équipe qui partage la même envie : faire connaître les talents et
+          rapprocher les communautés.
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between py-4"
+      >
+        <div class="shadow-lg rounded-xl">
+          <img
+            src="assets/New folder/salma.jpg"
+            alt=""
+            class="h-60 w-full object-cover shadow-lg rounded-t-xl"
+          />
+          <h4 class="text-lg font-bold pt-4 px-3">Salma El Amrani</h4>
+          <h5 class="text-brand-700 text-sm pt-4 px-3">
+            Coordination du réseau
+          </h5>
+          <p class="text-sm text-gray-500 py-2 px-3 pb-5">
+            À l’écoute des coopératives, Salma construit des liens durables
+            entre les ateliers et Taawon.
+          </p>
         </div>
-        <div>
-          <a href="partenaire.html"><button class="bg-emerald-700 border-1 border-gray-500 rounded-lg px-4 py-2 text-white text-sm hover:bg-emerald-900 transition duration-500 cursor-pointer mt-10" >Devenir partenaire</button></a>
+        <div class="shadow-lg rounded-xl">
+          <img
+            src="assets/New folder/youssef.jpg"
+            alt=""
+            class="h-60 w-full object-cover shadow-lg rounded-t-xl"
+          />
+          <h4 class="text-lg font-bold pt-4 px-3">Youssef Bennani</h4>
+          <h5 class="text-brand-700 text-sm pt-4 px-3">
+            Accompagnement des coopératives
+          </h5>
+          <p class="text-sm text-gray-500 py-2 px-3 pb-5">
+            Youssef accompagne les ateliers pour présenter leurs métiers et
+            raconter leurs créations.
+          </p>
         </div>
-      </section>
+        <div class="shadow-lg rounded-xl">
+          <img
+            src="assets/New folder/nadia.jpg"
+            alt=""
+            class="h-60 w-full object-cover shadow-lg rounded-t-xl"
+          />
+          <h4 class="text-lg font-bold pt-4 px-3">Nadia Aït Lahcen</h4>
+          <h5 class="text-brand-700 text-sm pt-4 px-3">
+            Contenus & transmission
+          </h5>
+          <p class="text-sm text-gray-500 py-2 px-3 pb-5">
+            Nadia donne une voix aux histoires et aux gestes qui font la
+            richesse de notre patrimoine.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="px-8 pt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between py-4"
+    >
+      <div class="">
+        <h2 class="text-2xl font-bold text-brand-700 pt-4">
+          Et si nous écrivions la suite ensemble ?
+        </h2>
+        <p class="text-sm text-gray-500">
+          Vous représentez une coopérative ? Partageons votre histoire avec le
+          réseau.
+        </p>
+      </div>
+      <div>
+        <a href="partenaire.html"
+          ><button
+            class="bg-emerald-700 border-1 border-gray-500 rounded-lg px-4 py-2 text-white text-sm hover:bg-emerald-900 transition duration-500 cursor-pointer mt-10"
+          >
+            Devenir partenaire
+          </button></a
+        >
+      </div>
+    </section>
 
-
-    <footer class="flex items-center justify-between bg-green-900 px-5 py-4 text-white">
-      <p>© 2026 Taawon. Tous droits réservés.</p>
-
-      <div class="social-media flex gap-5">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    <footer>
+      <div class="grid grid-cols-3 bg-emerald-700 px-5 py-5 text-white">
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="text-xl font-bold">Taawoon</a>
+          <p class="text-sm">
+            Des savoir-faire, des histoires, des liens. Ensemble, faisons
+            rayonner l’artisanat marocain.
+          </p>
+          <div class="flex gap-6 pt-2 pl-6">
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.linkedin.com/">Linkedin</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-bold">Lien Rapides</p>
+          <a href="index.html" class="text-sm">Accueil</a>
+          <a href="cooperatives.html" class="text-sm"
+            >Annuaire des coopératives</a
+          >
+          <a href="apropos.html" class="text-sm">Mission et Impact</a>
+          <a href="partenaire.html" class="text-sm">Devenir partenaire</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-bold">Restons on ligne</p>
+          <p>bonjour@taawon.ma</p>
+          <p>Rabat, Maroc</p>
+          <p>Une question ? Notre équipe est à votre écoute.</p>
+        </div>
+      </div>
+      <div class="bg-emerald-700">
+        <div
+          class="border-t border-gray-500 flex justify-between bg-emerald-700 text-white p-4 mx-6"
+        >
+          <p class="text-xs">© 2026 Taawon. Tous droits réservés.</p>
+          <p class="text-xs">Mentions légales · Confidentialité</p>
+        </div>
       </div>
     </footer>
   </body>

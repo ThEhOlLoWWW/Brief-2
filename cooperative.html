@@ -24,28 +24,103 @@
         --color-page: #f7f7f5;
         --color-btn: #17654f;
         --text-2xs: 0.625rem;
+        --color-footer: #123e33;
       }
     </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo">
+    <header class="sticky top-0 z-50">
+      <nav
+        class="flex items-center justify-between mt-1 bg-white shadow-md px-5 py-4 sticky z-50 text-base font-medium uppercase tracking-widest"
+      >
+        <div>
           <a href="index.html">
-            <img src="logo.png" alt="Logo" />
+            <img src="assets/images/taawon_logo.webp" alt="Logo" />
           </a>
         </div>
 
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="partenaire.html">Partenaire</a></li>
-          <li><a href="cooperatives.html">Coopérative</a></li>
-          <li><a href="apropos.html">A prepos</a></li>
+        <!-- Menu téléphone -->
+        <details class="relative md:hidden">
+          <summary
+            class="cursor-pointer list-none text-2xl"
+            aria-label="Ouvrir le menu"
+          >
+            ☰
+          </summary>
+
+          <ul
+            class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="partenaire.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Partenaire</a
+              >
+            </li>
+            <li>
+              <a
+                href="cooperatives.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Coopératives</a
+              >
+            </li>
+            <li>
+              <a
+                href="apropos.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >À propos</a
+              >
+            </li>
+          </ul>
+        </details>
+
+        <!-- Menu ordinateur -->
+        <ul class="hidden items-center gap-6 text-black md:flex">
+          <li>
+            <a
+              href="index.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="partenaire.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Partenaire</a
+            >
+          </li>
+          <li>
+            <a
+              href="cooperatives.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Coopératives</a
+            >
+          </li>
+          <li>
+            <a
+              href="apropos.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >À propos</a
+            >
+          </li>
         </ul>
 
-        <div class="icons">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-solid fa-user"></i>
+        <div class="flex items-center gap-4">
+          <i
+            class="fa-solid fa-magnifying-glass cursor-pointer hover:text-green-300 transition duration-300"
+          ></i>
+          <i
+            class="fa-solid fa-user cursor-pointer hover:text-green-300 transition duration-300"
+          ></i>
         </div>
       </nav>
     </header>
@@ -108,7 +183,7 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="/assets/images/Photography.png" alt="/" />
+            <img src="assets/images/Photography.png" alt="/" />
           </div>
         </div>
       </div>
@@ -150,32 +225,36 @@
       <div
         class="grid grid-cols-2 gap-3 py-5 lg:grid-cols-12 lg:grid-row-2 md:grid-col-6"
       >
-        <img src="/assets/images/p1.png" alt="" class="col-span-6 row-span-2" />
+        <img
+          src="/assets/images/p1.png"
+          alt="Tisserande devant un métier à tisser"
+          class="col-span-6 row-span-2 h-full w-full rounded-lg object-cover"
+        />
 
         <img
           src="/assets/images/p2.png"
-          alt=""
+          alt="Laine teinte suspendue pour sécher"
           class="col-span-3 h-full w-full rounded-lg object-cover"
         />
         <img
           src="/assets/images/p3.png"
-          alt=""
+          alt="Artisanes cardant de la laine"
           class="col-span-3 h-full w-full rounded-lg object-cover"
         />
 
         <img
           src="/assets/images/p4.png"
-          alt=""
+          alt="Outils de tissage sur un tapis"
           class="col-span-2 h-full w-full rounded-lg object-cover"
         />
         <img
           src="/assets/images/p5.png"
-          alt=""
+          alt="Tapis blanc à losanges rouges"
           class="col-span-2 h-full w-full rounded-lg object-cover"
         />
         <img
           src="/assets/images/p6.png"
-          alt=""
+          alt="Tapis colorés accrochés au mur"
           class="col-span-2 h-full w-full rounded-lg object-cover"
         />
       </div>
@@ -200,7 +279,11 @@
       </div>
       <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 my-5">
         <div class="bg-gray-200 rounded-sm">
-          <img src="/assets/images/pro1.png" alt="" class="rounded-t-sm" />
+          <img
+            src="/assets/images/pro1.png"
+            alt="Tapis rouge à motifs losanges"
+            class="rounded-t-sm w-full"
+          />
           <p class="text-gray-700 font-bold text-sm my-3 ml-3">
             Tapis Taznakht
           </p>
@@ -213,7 +296,11 @@
           </div>
         </div>
         <div class="bg-gray-200 rounded-sm">
-          <img src="/assets/images/pro2.png" alt="" class="rounded-t-sm" />
+          <img
+            src="/assets/images/pro2.png"
+            alt="Tapis crème à losanges noirs"
+            class="rounded-t-sm w-full"
+          />
           <p class="text-gray-700 font-bold text-sm my-3 ml-3">
             Tapis des montagnes
           </p>
@@ -226,7 +313,11 @@
           </div>
         </div>
         <div class="bg-gray-200 rounded-sm">
-          <img src="/assets/images/pro3.png" alt="" class="rounded-t-sm" />
+          <img
+            src="/assets/images/pro3.png"
+            alt="Petit tapis blanc coloré"
+            class="rounded-t-sm w-full"
+          />
           <p class="text-gray-700 font-bold text-sm my-3 ml-3">
             Petit tapis Azilal
           </p>
@@ -237,7 +328,11 @@
           </div>
         </div>
         <div class="bg-gray-200 rounded-sm">
-          <img src="/assets/images/pro4.png" alt="" class="rounded-t-sm" />
+          <img
+            src="/assets/images/pro4.png"
+            alt="Coussin rouge à motifs berbères"
+            class="rounded-t-sm w-full"
+          />
           <p class="text-gray-700 font-bold text-sm my-3 ml-3">
             Coussin Tifawin
           </p>
@@ -248,7 +343,11 @@
           </div>
         </div>
         <div class="bg-gray-200 rounded-sm">
-          <img src="/assets/images/pro5.png" alt="" class="rounded-t-sm" />
+          <img
+            src="/assets/images/pro5.png"
+            alt="Plaid en laine naturelle plié"
+            class="rounded-t-sm w-full"
+          />
           <p class="text-gray-700 font-bold text-sm my-3 ml-3">
             Plaid de l’Atlas
           </p>
@@ -261,7 +360,11 @@
           </div>
         </div>
         <div class="bg-gray-200 rounded-sm">
-          <img src="/assets/images/pro6.png" alt="" class="rounded-t-sm" />
+          <img
+            src="/assets/images/pro6.png"
+            alt="Pouf rouge en laine tissée"
+            class="rounded-t-sm w-full"
+          />
           <p class="text-gray-700 font-bold text-sm my-3 ml-3">Pouf Abrid</p>
           <p class="text-gray-500 text-xs ml-3">
             Laine tissée · 50 × 50 × 35 cm
@@ -281,13 +384,42 @@
     </section>
 
     <footer>
-      <p>© 2026 Taawon. Tous droits réservés.</p>
-
-      <div class="social-media">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <div class="grid grid-cols-3 bg-emerald-700 px-5 py-5 text-white">
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="text-xl font-bold">Taawoon</a>
+          <p class="text-sm">
+            Des savoir-faire, des histoires, des liens. Ensemble, faisons
+            rayonner l’artisanat marocain.
+          </p>
+          <div class="flex gap-6 pt-2 pl-6">
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.linkedin.com/">Linkedin</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-bold">Lien Rapides</p>
+          <a href="index.html" class="text-sm">Accueil</a>
+          <a href="cooperatives.html" class="text-sm"
+            >Annuaire des coopératives</a
+          >
+          <a href="apropos.html" class="text-sm">Mission et Impact</a>
+          <a href="partenaire.html" class="text-sm">Devenir partenaire</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-bold">Restons on ligne</p>
+          <p>bonjour@taawon.ma</p>
+          <p>Rabat, Maroc</p>
+          <p>Une question ? Notre équipe est à votre écoute.</p>
+        </div>
+      </div>
+      <div class="bg-emerald-700">
+        <div
+          class="border-t border-gray-500 flex justify-between bg-emerald-700 text-white p-4 mx-6"
+        >
+          <p class="text-xs">© 2026 Taawon. Tous droits réservés.</p>
+          <p class="text-xs">Mentions légales · Confidentialité</p>
+        </div>
       </div>
     </footer>
   </body>
