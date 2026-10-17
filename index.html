@@ -4,185 +4,319 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Accueil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+    theme{
+        --font-sans: "Inter", sans-serif;
+        --color-brand-50: #eaf4ef;
+        --color-brand-700: #12664f;
+        --color-page: #f7f7f5;
+        --color-btn: #17654f;
+        --text-2xs: 0.625rem;
+      }
+    </style>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="logo">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <header class="bg-white items-center sticky top-0 z-50">
+       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex-shrink-0">
                 <a href="index.html">
-                    <img src="logo.png" alt="Logo" />
+                    <img src="assets/images/taawon_logo.png" alt="Logo" class="h-12 w-auto" />
                 </a>
             </div>
-
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="partenaire.html">Partenaire</a></li>
-                <li><a href="cooperatives.html">Coopératives</a></li>
-                <li><a href="apropos.html">A prepos</a></li>
+            
+<details class="relative md:hidden">
+  <summary class="cursor-pointer list-none text-2xl " aria-label="Ouvrir le menu">
+    ☰
+  </summary>
+  <!-- mnobile version -->
+   <ul class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg">
+                <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
+                <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
+                <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
+                <li><a href="apropos.html" class="hover:text-amber-600 transition">A prepos</a></li>
+            </ul>
+     </details>     
+<!-- ordinateur version -->
+            <ul class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
+                <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
+                <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
+                <li><a href="apropos.html" class="hover:text-amber-600 transition">A prepos</a></li>
             </ul>
 
-            <div class="icons">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-user"></i>
+            <div class="flex items-center space-x-5 text-gray-600 text-lg">
+                <button class="hover:text-amber-600 transition"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hover:text-amber-600 transition"><i class="fa-solid fa-user"></i></button>
             </div>
         </nav>
     </header>
+ <!-- HERO SECTION : IMAGE DE FOND + TITRE/BOUTONS + CHIFFRES CLÉS EN BAS -->
+<section class="relative bg-gray-900 text-white rounded-2xl shadow-xl overflow-hidden my-8 border border-gray-100">
 
-    <div>
-        <h1>Bienvenue sur Taawon</h1>
-        <p>
-            Découvrez le meilleur de l'artisanat local et soutenez nos Coopératives
-        </p>
-        <a href="cooperative.html" class="btn">Découvrir les Coopératives</a>
-        <br />
-        <a href="partenaire.html" class="btn">Devenir partenaire</a>
+  <!-- 1. IMAGE DE FOND AVEC OVERLAY SOMBRE -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="assets/images/artisanat pic.jpg" 
+      alt="Nos artisans au travail" 
+      class="w-full h-full object-cover"
+    />
+    <!-- Voile sombre pour garantir la lisibilité du texte et des chiffres -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+  </div>
+
+  <!-- 2. CONTENU PRINCIPAL PAR-DESSUS L'IMAGE -->
+  <div class="relative z-10 px-6 py-12 sm:px-10 sm:py-16 md:py-20 max-w-6xl mx-auto flex flex-col items-center">
+    
+    <!-- EN-TÊTE : TITRE, SOUS-TITRE & BOUTONS -->
+    <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-md">
+        Bienvenue sur Taawon
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+        Découvrez le meilleur de l'artisanat local et soutenez nos Coopératives
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="cooperative.html" class="bg-green-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-green-700 transition-colors shadow-lg">
+          Découvrir les Coopératives
+        </a>
+        <a href="partenaire.html" class="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg">
+          Devenir partenaire
+        </a>
+      </div>
     </div>
 
-    <section>
-        <h2>Nos chiffres clés</h2>
-        <ul>
-            <li>
-                <img src="./assets/icons/" alt="" aria-hidden="true" width="32" height="32" /><strong>+120</strong>
-                Coopératives
-            </li>
-            <li>
-                <img src="./assets/icons/" alt="" aria-hidden="true" width="32" height="32" /><strong>+1200</strong>
-                Artisan
-            </li>
-            <li>
-                <img src="./assets/icons/" alt="" aria-hidden="true" width="32" height="32" /><strong>12</strong> Région
-            </li>
-            <li>
-                <img src="./assets/icons/" alt="" aria-hidden="true" width="32" height="32" /><strong>+3500</strong>
-                Produits
-            </li>
-        </ul>
-    </section>
-    <h3>Nos catégories d'artisanat</h3>
-    <div>
-        <article>
-            <a href="#">
-                <img src="path/to/tapis.jpg" alt="Photo de Tapis">
-                <div>
-                    <h4>Tapis</h4>
-                </div>
-            </a>
-        </article>
-        <article>
-            <a href="#">
-                <img src="path/to/poterie.jpg" alt="Photo de Poterie">
-                <div>
-                    <h4>Poterie</h4>
-                </div>
-            </a>
-        </article>
-        <article>
-            <a href="#">
-                <img src="path/to/maroquinerie.jpg" alt="Photo de Maroquinerie">
-                <div>
-                    <h4>Maroquinerie</h4>
-                </div>
-            </a>
-        </article>
-        <article>
-            <a href="#">
-                <img src="path/to/sculpture.jpg" alt="Photo de Sculpture">
-                <div>
-                    <h4>Sculpture</h4>
-                </div>
-            </a>
-        </article>
-        <article>
-            <a href="#">
-                <img src="path/to/bijoux.jpg" alt="Photo de Bijoux">
-                <div>
-                    <h4>Bijoux</h4>
-                </div>
-            </a>
-        </article>
-        <article>
-            <a href="#">
-                <img src="path/to/terroir.jpg" alt="Photo Produit de terroir">
-                <div>
-                    <h4>Produits du terroir</h4>
-                </div>
-            </a>
-        </article>
-    </div>
-    </section>
-     <h4>COOPERATIVES A LA UNE</h4>
-     <article>
-      <a href="#">
-                <img src=".jpg" alt="tissage">
-                <div>
-                    <h4>Coopérative d'Atlas</h4>
-                    <p>Tissage Traditionnel</p>
-                </div>
-            </a>
-        </article>
-         <article>
-      <a href="#">
-                <img src=".jpg" alt="poterie">
-                <div>
-                    <h4>Coopérative Terre & feu</h4>
-                    <p>Poterie & Céramique</p>
-                </div>
-            </a>
-        </article>
-         <article>
-      <a href="#">
-                <img src=".jpg" alt="Argania">
-                <div>
-                    <h4>Coopérative Argania</h4>
-                    <p>Huiles & Cosmétiques</p>
-                </div>
-            </a>
-        </article>
-        <div>
-        <h5>CE QU'ILS DISENT DE NOUS</h5>
-        <div>
-            <p>Grace a Taawon,on vend facilement</p>
-             <p>-ahmed</p>
-            <img src="" alt="profil d'ahmed">
-        </div>
+    <!-- CHIFFRES CLÉS EN BAS -->
+    <div class="w-full pt-8 border-t border-white/20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-white">
+        Nos Chiffres Clés
+      </h2>
 
-         <div>
-            <p>Une poterie magnifiaque,de très bonne qualité</p>
-             <p>-Sophie</p>
-            <img src="" alt="profil d'sophie">
-        </div>
-        <div>
-            <p>Une super initiative pour valoriser l'art</p>
-         <p>-Saad</p>
-            <img src="" alt="profil d'saad">
-        </div>
-</div>
-<section> 
-    <h3>RESTEZ INFORMER</h3>
-    <p>incrivez-vous pour recevoir nos dernières actualités</p>
-    <form action="#" method="POST">
-    <div>
-         <label for="email"></label>
-    <input type="email" id="email" name="email"
-           required placeholder="Entrez votre email...">
+      <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- 1. Coopératives -->
+        <li class="flex items-center space-x-3 sm:space-x-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+          <div class="p-2.5 bg-green-500/20 rounded-xl flex-shrink-0">
+            <img src="assets/icons/users.svg" alt="" aria-hidden="true" class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 invert">
+          </div>
+          <div>
+            <strong class="block text-2xl sm:text-3xl font-bold text-green-400">+120</strong>
+            <span class="text-xs sm:text-sm text-gray-200 font-medium">Coopératives</span>
+          </div>
+        </li>
+
+        <!-- 2. Artisans -->
+        <li class="flex items-center space-x-3 sm:space-x-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+          <div class="p-2.5 bg-green-500/20 rounded-xl flex-shrink-0">
+            <img src="assets/icons/profile.svg" alt="" aria-hidden="true" class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 invert">
+          </div>
+          <div>
+            <strong class="block text-2xl sm:text-3xl font-bold text-green-400">+1200</strong>
+            <span class="text-xs sm:text-sm text-gray-200 font-medium">Artisans</span>
+          </div>
+        </li>
+
+        <!-- 3. Régions -->
+        <li class="flex items-center space-x-3 sm:space-x-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+          <div class="p-2.5 bg-green-500/20 rounded-xl flex-shrink-0">
+            <img src="assets/images/marqueur.png" alt="" aria-hidden="true" class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 invert">
+          </div>
+          <div>
+            <strong class="block text-2xl sm:text-3xl font-bold text-green-400">12</strong>
+            <span class="text-xs sm:text-sm text-gray-200 font-medium">Régions</span>
+          </div>
+        </li>
+
+        <!-- 4. Produits -->
+        <li class="flex items-center space-x-3 sm:space-x-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+          <div class="p-2.5 bg-green-500/20 rounded-xl flex-shrink-0">
+            <img src="assets/icons/products-cube.svg" alt="" aria-hidden="true" class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 invert">
+          </div>
+          <div>
+            <strong class="block text-2xl sm:text-3xl font-bold text-green-400">+3500</strong>
+            <span class="text-xs sm:text-sm text-gray-200 font-medium">Produits</span>
+          </div>
+        </li>
+
+      </ul>
     </div>
-     <button type="submit">S'abonner</button>
-     </form>
+
+  </div>
 </section>
-    <footer>
-        <p>© 2026 Taawon. Tous droits réservés.</p>
+   <!--  CATÉGORIES D'ARTISANAT -->
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h3 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase tracking-wide">
+        Nos catégories d'artisanat
+    </h3>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div class="social-media">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/tapis marocain.jpg" alt="Photo de Tapis" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Tapis</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/poterie marocain.jpg" alt="Photo de Poterie" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Poterie</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/maroquenerie marocain.jpg" alt="Photo de Maroquinerie" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Maroquinerie</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/sculpture marocain.jpg" alt="Photo de Sculpture" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Sculpture</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/bijoux marocain 22.jpg" alt="Photo de Bijoux" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Bijoux</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/produit marocain.webp" alt="Photo Produit de terroir" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Produits du terroir</h4>
+                </div>
+            </a>
+        </article>
+    </div>
+</section>
+
+<!--  COOPÉRATIVES À LA UNE -->
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h4 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase tracking-wide">
+        Coopératives à la une
+    </h4>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Coopérative 1 -->
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100">
+            <a href="#" class="block">
+                <img src="assets/images/Tissage au maroc.jpg" alt="tissage" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5">
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Coopérative d'Atlas</h4>
+                    <p class="text-gray-600">Tissage Traditionnel</p>
+                </div>
+            </a>
+        </article>
+
+        <!-- Coopérative 2 -->
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100">
+            <a href="#" class="block">
+                <img src="assets/images/Poterie au maroc.webp" alt="poterie" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5">
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Coopérative Terre & feu</h4>
+                    <p class="text-gray-600">Poterie & Céramique</p>
+                </div>
+            </a>
+        </article>
+
+        <!-- Coopérative 3 -->
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100">
+            <a href="#" class="block">
+                <img src="assets/images/Argan au maroc.jpg" alt="Argania" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5">
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Coopérative Argania</h4>
+                    <p class="text-gray-600">Huiles & Cosmétiques</p>
+                </div>
+            </a>
+        </article>
+    </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="bg-gray-100 py-12 px-4 my-12">
+    <div class="max-w-7xl mx-auto">
+        <h5 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase tracking-wide">
+            Ce qu'ils disent de nous
+        </h5>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!--  1 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-between">
+                <p class="text-gray-700 italic mb-4">"Grâce à Taawon, on vend facilement"</p>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/ahmed.jpg" alt="profil d'ahmed" class="w-10 h-10 rounded-full object-cover bg-gray-200">
+                    <p class="font-semibold text-gray-900">- Ahmed</p>
+                </div>
+            </div>
+
+            <!--  2 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-between">
+                <p class="text-gray-700 italic mb-4">"Une poterie magnifique, de très bonne qualité"</p>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/sophie.jpg" alt="profil de sophie" class="w-10 h-10 rounded-full object-cover bg-gray-200">
+                    <p class="font-semibold text-gray-900">- Sophie</p>
+                </div>
+            </div>
+
+            <!--  3 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-between">
+                <p class="text-gray-700 italic mb-4">"Une super initiative pour valoriser l'art"</p>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/saad.jpg" alt="profil de saad" class="w-10 h-10 rounded-full object-cover bg-gray-200">
+                    <p class="font-semibold text-gray-900">- Saad</p>
+                </div>
+            </div>
         </div>
-    </footer>
-</body>
+    </div>
+    <section bg-gray-50 py-16 px-4 my-12 border-t border-d border-gray-200>
+        <div class="max-w-xl mx-auto text-center">
+    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 uppercase tracking-wide">RESTEZ INFORMER</h3>
+    <p class="text-gray-600 mb-6">incrivez-vous pour recevoir nos dernières actualités</p>
+    <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3">
+    <div class="flex-grow">
 
+         <label for="email" class="sr-only">Adress email</label>
+    <input type="email" id="email" name="email"
+           required placeholder="Entrez votre email..."
+           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent text-gray-900 placeholder-gray-400 shadow-sm transition-all">
+    </div>
+     <button type="submit" class="bg-green-800 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 shrink-0 cursor-pointer">
+        S'abonner</button>
+     </form>
+</div>
+</section>
+<section>
+     <footer class="flex items-center justify-between bg-green-900 px-5 py-4 text-white">
+      <p>© 2026 Taawon.Tous droits réservés.</p>
+
+      <div class="social-media flex gap-5">
+        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-whatsapp"></i></a>
+      </div>
+    </footer>
+    </section>
+</body>
 </html>
