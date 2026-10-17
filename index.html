@@ -21,39 +21,100 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
-  <header class="bg-white items-center sticky top-0 z-50">
-       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex-shrink-0">
-                <a href="index.html">
-                    <img src="assets/images/taawon_logo.png" alt="Logo" class="h-12 w-auto" />
-                </a>
-            </div>
-            
-<details class="relative md:hidden">
-  <summary class="cursor-pointer list-none text-2xl " aria-label="Ouvrir le menu">
-    ☰
-  </summary>
-  <!-- mnobile version -->
-   <ul class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg">
-                <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
-                <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
-                <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
-                <li><a href="apropos.html" class="hover:text-amber-600 transition">A prepos</a></li>
-            </ul>
-     </details>     
-<!-- ordinateur version -->
-            <ul class="hidden md:flex space-x-8 font-medium text-gray-600">
-                <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
-                <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
-                <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
-                <li><a href="apropos.html" class="hover:text-amber-600 transition">A prepos</a></li>
-            </ul>
+  <header class="sticky top-0 z-50">
+      <nav
+        class="flex items-center justify-between mt-1 bg-white shadow-md px-5 py-4 sticky z-50 text-base font-medium uppercase tracking-widest"
+      >
+        <div>
+          <a href="index.html">
+            <img src="assets/images/taawon_logo.webp" alt="Logo" />
+          </a>
+        </div>
 
-            <div class="flex items-center space-x-5 text-gray-600 text-lg">
-                <button class="hover:text-amber-600 transition"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="hover:text-amber-600 transition"><i class="fa-solid fa-user"></i></button>
-            </div>
-        </nav>
+        <!-- Menu téléphone -->
+        <details class="relative md:hidden">
+          <summary
+            class="cursor-pointer list-none text-2xl"
+            aria-label="Ouvrir le menu"
+          >
+            ☰
+          </summary>
+
+          <ul
+            class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="partenaire.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Partenaire</a
+              >
+            </li>
+            <li>
+              <a
+                href="cooperatives.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Coopératives</a
+              >
+            </li>
+            <li>
+              <a
+                href="apropos.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >À propos</a
+              >
+            </li>
+          </ul>
+        </details>
+
+        <!-- Menu ordinateur -->
+        <ul class="hidden items-center gap-6 text-black md:flex">
+          <li>
+            <a
+              href="index.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="partenaire.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Partenaire</a
+            >
+          </li>
+          <li>
+            <a
+              href="cooperatives.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Coopératives</a
+            >
+          </li>
+          <li>
+            <a
+              href="apropos.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >À propos</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <i
+            class="fa-solid fa-magnifying-glass cursor-pointer hover:text-green-300 transition duration-300"
+          ></i>
+          <i
+            class="fa-solid fa-user cursor-pointer hover:text-green-300 transition duration-300"
+          ></i>
+        </div>
+      </nav>
     </header>
  <!-- HERO SECTION : IMAGE DE FOND + TITRE/BOUTONS + CHIFFRES CLÉS EN BAS -->
 <section class="relative bg-gray-900 text-white rounded-2xl shadow-xl overflow-hidden my-8 border border-gray-100">
@@ -307,14 +368,43 @@
 </div>
 </section>
 <section>
-     <footer class="flex items-center justify-between bg-green-900 px-5 py-4 text-white">
-      <p>© 2026 Taawon.Tous droits réservés.</p>
-
-      <div class="social-media flex gap-5">
-        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-tiktok"></i></a>
-        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-whatsapp"></i></a>
+     <footer>
+      <div class="grid grid-cols-3 bg-emerald-700 px-5 py-5 text-white">
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="text-xl font-bold">Taawoon</a>
+          <p class="text-sm">
+            Des savoir-faire, des histoires, des liens. Ensemble, faisons
+            rayonner l’artisanat marocain.
+          </p>
+          <div class="flex gap-6 pt-2 pl-6">
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.linkedin.com/">Linkedin</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-bold">Lien Rapides</p>
+          <a href="index.html" class="text-sm">Accueil</a>
+          <a href="cooperatives.html" class="text-sm"
+            >Annuaire des coopératives</a
+          >
+          <a href="apropos.html" class="text-sm">Mission et Impact</a>
+          <a href="partenaire.html" class="text-sm">Devenir partenaire</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-bold">Restons on ligne</p>
+          <p>bonjour@taawon.ma</p>
+          <p>Rabat, Maroc</p>
+          <p>Une question ? Notre équipe est à votre écoute.</p>
+        </div>
+      </div>
+      <div class="bg-emerald-700">
+        <div
+          class="border-t border-gray-500 flex justify-between bg-emerald-700 text-white p-4 mx-6"
+        >
+          <p class="text-xs">© 2026 Taawon. Tous droits réservés.</p>
+          <p class="text-xs">Mentions légales · Confidentialité</p>
+        </div>
       </div>
     </footer>
     </section>
