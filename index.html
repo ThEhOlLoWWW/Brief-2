@@ -9,39 +9,101 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <header class="sticky top-0 z-50">
+      <nav
+        class="flex items-center justify-between mt-1 bg-white shadow-md px-5 py-4 sticky z-50 text-base font-medium uppercase tracking-widest"
+      >
+        <div>
+          <a href="index.html">
+            <img src="assets/images/taawon_logo.webp" alt="Logo" />
+          </a>
+        </div>
 
-    <!-- HEADER -->
-    <header class="bg-white sticky top-0 z-50 shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="index.html">
-                <img src="assets/images/taawon_logo.png" alt="Logo" class="h-12 w-auto" />
-            </a>
-            
-            <!-- Menu mobile -->
-            <details class="relative md:hidden">
-                <summary class="cursor-pointer list-none text-2xl">☰</summary>
-                <ul class="absolute right-0 top-full mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 shadow-lg">
-                    <li><a href="index.html" class="hover:text-amber-600">Accueil</a></li>
-                    <li><a href="partenaire.html" class="hover:text-amber-600">Partenaire</a></li>
-                    <li><a href="cooperatives.html" class="hover:text-amber-600">Coopératives</a></li>
-                    <li><a href="apropos.html" class="hover:text-amber-600">A propos</a></li>
-                </ul>
-            </details>    
+        <!-- Menu téléphone -->
+        <details class="relative md:hidden">
+          <summary
+            class="cursor-pointer list-none text-2xl"
+            aria-label="Ouvrir le menu"
+          >
+            ☰
+          </summary>
 
-            <!-- Menu ordinateur -->
-            <ul class="hidden md:flex space-x-8 font-medium text-gray-600">
-                <li><a href="index.html" class="hover:text-amber-600">Accueil</a></li>
-                <li><a href="partenaire.html" class="hover:text-amber-600">Partenaire</a></li>
-                <li><a href="cooperatives.html" class="hover:text-amber-600">Coopératives</a></li>
-                <li><a href="apropos.html" class="hover:text-amber-600">A propos</a></li>
-            </ul>
+          <ul
+            class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a
+                href="partenaire.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Partenaire</a
+              >
+            </li>
+            <li>
+              <a
+                href="cooperatives.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >Coopératives</a
+              >
+            </li>
+            <li>
+              <a
+                href="apropos.html"
+                class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+                >À propos</a
+              >
+            </li>
+          </ul>
+        </details>
 
-            <div class="flex items-center space-x-5 text-gray-600 text-lg">
-                <button class="hover:text-amber-600"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="hover:text-amber-600"><i class="fa-solid fa-user"></i></button>
-            </div>
-        </nav>
+        <!-- Menu ordinateur -->
+        <ul class="hidden items-center gap-6 text-black md:flex">
+          <li>
+            <a
+              href="index.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              href="partenaire.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Partenaire</a
+            >
+          </li>
+          <li>
+            <a
+              href="cooperatives.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >Coopératives</a
+            >
+          </li>
+          <li>
+            <a
+              href="apropos.html"
+              class="transition duration-300 hover:text-green-600 hover:underline decoration-green-300"
+              >À propos</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <i
+            class="fa-solid fa-magnifying-glass cursor-pointer hover:text-green-300 transition duration-300"
+          ></i>
+          <i
+            class="fa-solid fa-user cursor-pointer hover:text-green-300 transition duration-300"
+          ></i>
+        </div>
+      </nav>
     </header>
 
     <!-- HERO SECTION -->
@@ -186,31 +248,55 @@
         </div>
     </section>
 
-    <!-- NEWSLETTER -->
-    <section class="bg-gray-50 py-16 px-4 mb-12 border-t border-gray-200">
-        <div class="max-w-xl mx-auto text-center">
-            <h3 class="text-2xl font-bold text-gray-900 mb-2 uppercase">Restez informés</h3>
-            <p class="text-gray-600 mb-6">Inscrivez-vous pour recevoir nos dernières actualités</p>
-            
-            <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3">
-                <input type="email" required placeholder="Entrez votre email..."
-                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600">
-                <button type="submit" class="bg-green-800 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shrink-0">
-                    S'abonner
-                </button>
-            </form>
+         <label for="email" class="sr-only">Adress email</label>
+    <input type="email" id="email" name="email"
+           required placeholder="Entrez votre email..."
+           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent text-gray-900 placeholder-gray-400 shadow-sm transition-all">
+    </div>
+     <button type="submit" class="bg-green-800 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 shrink-0 cursor-pointer">
+        S'abonner</button>
+     </form>
+</div>
+</section>
+<section>
+     <footer>
+      <div class="grid grid-cols-3 bg-emerald-700 px-5 py-5 text-white">
+        <div class="flex flex-col gap-2">
+          <a href="index.html" class="text-xl font-bold">Taawoon</a>
+          <p class="text-sm">
+            Des savoir-faire, des histoires, des liens. Ensemble, faisons
+            rayonner l’artisanat marocain.
+          </p>
+          <div class="flex gap-6 pt-2 pl-6">
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.linkedin.com/">Linkedin</a>
+          </div>
         </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="flex items-center justify-between bg-green-900 px-6 py-4 text-white">
-        <p>© 2026 Taawon. Tous droits réservés.</p>
-        <div class="flex gap-5 text-lg">
-            <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-whatsapp"></i></a>
+        <div class="flex flex-col gap-2">
+          <p class="font-bold">Lien Rapides</p>
+          <a href="index.html" class="text-sm">Accueil</a>
+          <a href="cooperatives.html" class="text-sm"
+            >Annuaire des coopératives</a
+          >
+          <a href="apropos.html" class="text-sm">Mission et Impact</a>
+          <a href="partenaire.html" class="text-sm">Devenir partenaire</a>
         </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-bold">Restons on ligne</p>
+          <p>bonjour@taawon.ma</p>
+          <p>Rabat, Maroc</p>
+          <p>Une question ? Notre équipe est à votre écoute.</p>
+        </div>
+      </div>
+      <div class="bg-emerald-700">
+        <div
+          class="border-t border-gray-500 flex justify-between bg-emerald-700 text-white p-4 mx-6"
+        >
+          <p class="text-xs">© 2026 Taawon. Tous droits réservés.</p>
+          <p class="text-xs">Mentions légales · Confidentialité</p>
+        </div>
+      </div>
     </footer>
 </body>
 </html>
