@@ -10,8 +10,6 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
-
-    <!-- HEADER -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex-shrink-0">
@@ -19,29 +17,29 @@
                     <img src="assets/images/taawon_logo.png" alt="Logo" class="h-12 w-auto" />
                 </a>
             </div>
-
-            <!-- Menu mobile -->
             <details class="relative md:hidden">
-                <summary class="cursor-pointer list-none text-2xl" aria-label="Ouvrir le menu">☰</summary>
-                <ul class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg">
-                    <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
-                    <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
-                    <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
-                    <li><a href="apropos.html" class="hover:text-amber-600 transition">A propos</a></li>
-                </ul>
-            </details>    
-
-            <!-- Menu ordinateur -->
+  <summary class="cursor-pointer list-none text-2xl " aria-label="Ouvrir le menu">
+    ☰
+  </summary>
+  <!-- mnobile version -->
+   <ul class="absolute right-0 top-full z-50 mt-4 flex w-48 flex-col gap-4 rounded-lg bg-white p-4 text-black shadow-lg">
+                <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
+                <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
+                <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
+                <li><a href="apropos.html" class="hover:text-amber-600 transition">A prepos</a></li>
+            </ul>
+     </details>     
+<!-- ordinateur version -->
             <ul class="hidden md:flex space-x-8 font-medium text-gray-600">
                 <li><a href="index.html" class="hover:text-amber-600 transition">Accueil</a></li>
                 <li><a href="partenaire.html" class="hover:text-amber-600 transition">Partenaire</a></li>
                 <li><a href="cooperatives.html" class="hover:text-amber-600 transition">Coopératives</a></li>
-                <li><a href="apropos.html" class="hover:text-amber-600 transition">A propos</a></li>
+                <li><a href="apropos.html" class="hover:text-amber-600 transition">A prepos</a></li>
             </ul>
 
             <div class="flex items-center space-x-5 text-gray-600 text-lg">
-                <button class="hover:text-amber-600 transition"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="hover:text-amber-600 transition"><i class="fa-solid fa-user"></i></button>
+                <button class="hover:text-amber-400 transition"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hover:text-amber-400 transition"><i class="fa-solid fa-user"></i></button>
             </div>
         </nav>
     </header>
@@ -82,13 +80,12 @@
     <!-- GRILLE DES 9 COOPÉRATIVES -->
     <section class="max-w-7xl mx-auto py-10 px-4">
         <p class="text-2xl font-bold text-gray-900 mb-8 text-center md:text-left">9 coopératives à découvrir</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- 1. Atlas -->
-            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
+        <div class="grid grid-cols-1 md:grid-cold-2 lg:grid-cols-3 gap-8">
+            <article
+                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
                 <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/Tissage au maroc.jpg" alt="Coopérative Atlas" class="w-full h-52 object-cover " />
+                    <img src="assets/images/Tissage au maroc.jpg" alt="Photo Cooperatives Atlas"
+                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
                 </a>
                 <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
                     <div>
@@ -227,15 +224,17 @@
         <p class="text-lg font-semibold text-gray-700">Vous avez découvert les 9 coopératives de cette sélection.</p>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="flex items-center justify-between bg-green-900 px-5 py-4 text-white mt-8">
-        <p>© 2026 Taawon. Tous droits réservés.</p>
-        <div class="social-media flex gap-5 text-lg">
-            <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
+
+
+    <footer class="flex items-center justify-between bg-green-900 px-5 py-4 text-white">
+      <p>© 2026 Taawon. Tous droits réservés.</p>
+
+      <div class="social-media flex gap-5">
+        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="hover:text-amber-400 transition fa-brands fa-whatsapp"></i></a>
+      </div>
     </footer>
 </body>
 </html>
