@@ -1,12 +1,23 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accueil-Taawon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Accueil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+    theme{
+        --font-sans: "Inter", sans-serif;
+        --color-brand-50: #eaf4ef;
+        --color-brand-700: #12664f;
+        --color-page: #f7f7f5;
+        --color-btn: #17654f;
+        --text-2xs: 0.625rem;
+      }
+    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
@@ -105,148 +116,246 @@
         </div>
       </nav>
     </header>
+ <!-- HERO SECTION : IMAGE DE FOND + TITRE/BOUTONS + CHIFFRES CLÉS EN BAS -->
+<section class="relative bg-gray-900 text-white rounded-2xl shadow-xl overflow-hidden my-8 border border-gray-100">
 
-    <!-- HERO SECTION -->
-    <section class="relative bg-gray-900 text-white rounded-2xl shadow-xl overflow-hidden my-8 max-w-7xl mx-auto">
-        <div class="absolute inset-0">
-            <img src="assets/images/artisanat pic.jpg" alt="Artisans" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/70"></div>
-        </div>
+  <!-- 1. IMAGE DE FOND AVEC OVERLAY SOMBRE -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="assets/images/artisanat pic.jpg" 
+      alt="Nos artisans au travail" 
+      class="w-full h-full object-cover"
+    />
+    <!-- Voile sombre pour garantir la lisibilité du texte et des chiffres -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+  </div>
 
-        <div class="relative z-10 px-6 py-16 max-w-5xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Bienvenue sur Taawon</h1>
-            <p class="text-lg text-gray-200 mb-8">Découvrez le meilleur de l'artisanat local et soutenez nos Coopératives</p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-                <a href="cooperative.html" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 font-medium">Découvrir les Coopératives</a>
-                <a href="partenaire.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 font-medium">Devenir partenaire</a>
-            </div>
+  <!-- 2. CONTENU PRINCIPAL PAR-DESSUS L'IMAGE -->
+  <div class="relative z-10 px-6 py-12 sm:px-10 sm:py-16 md:py-20 max-w-6xl mx-auto flex flex-col items-center">
+    
+    <!-- EN-TÊTE : TITRE, SOUS-TITRE & BOUTONS -->
+    <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-md">
+        Bienvenue sur Taawon
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+        Découvrez le meilleur de l'artisanat local et soutenez nos Coopératives
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="cooperative.html" class="bg-green-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-green-700 transition-colors shadow-lg">
+          Découvrir les Coopératives
+        </a>
+        <a href="partenaire.html" class="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg">
+          Devenir partenaire
+        </a>
+      </div>
+    </div>
 
-            <!-- CHIFFRES CLÉS -->
-            <div class="pt-8 border-t border-white/20">
-                <h2 class="text-2xl font-bold mb-6">Nos Chiffres Clés</h2>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    
-                    <div class="flex items-center space-x-3 bg-white/10 p-4 rounded-xl">
-                        <img src="assets/icons/users.svg" alt="" class="w-8 h-8 filter brightness-0 invert">
-                        <div class="text-left">
-                            <strong class="block text-2xl font-bold text-green-400">+120</strong>
-                            <span class="text-xs text-gray-200">Coopératives</span>
-                        </div>
-                    </div>
+    <!-- CHIFFRES CLÉS EN BAS -->
+    <div class="w-full pt-8 border-t border-white/20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-white">
+        Nos Chiffres Clés
+      </h2>
 
-                    <div class="flex items-center space-x-3 bg-white/10 p-4 rounded-xl">
-                        <img src="assets/icons/profile.svg" alt="" class="w-8 h-8 filter brightness-0 invert">
-                        <div class="text-left">
-                            <strong class="block text-2xl font-bold text-green-400">+1200</strong>
-                            <span class="text-xs text-gray-200">Artisans</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center space-x-3 bg-white/10 p-4 rounded-xl">
-                        <img src="assets/images/marqueur.png" alt="" class="w-8 h-8 filter brightness-0 invert">
-                        <div class="text-left">
-                            <strong class="block text-2xl font-bold text-green-400">12</strong>
-                            <span class="text-xs text-gray-200">Régions</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center space-x-3 bg-white/10 p-4 rounded-xl">
-                        <img src="assets/icons/products-cube.svg" alt="" class="w-8 h-8 filter brightness-0 invert">
-                        <div class="text-left">
-                            <strong class="block text-2xl font-bold text-green-400">+3500</strong>
-                            <span class="text-xs text-gray-200">Produits</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CATÉGORIES -->
-    <section class="max-w-7xl mx-auto px-4 py-12">
-        <h3 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase">Nos catégories d'artisanat</h3>
+      <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/tapis marocain.jpg" alt="Tapis" class="w-full h-64 object-cover">
-                <div class="p-4 text-center"><h4 class="text-xl font-semibold">Tapis</h4></div></a>
-            </article>
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/poterie marocain.jpg" alt="Poterie" class="w-full h-64 object-cover">
-                <div class="p-4 text-center"><h4 class="text-xl font-semibold">Poterie</h4></div></a>
-            </article>
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/maroquenerie marocain.jpg" alt="Maroquinerie" class="w-full h-64 object-cover">
-                <div class="p-4 text-center"><h4 class="text-xl font-semibold">Maroquinerie</h4></div></a>
-            </article>
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/sculpture marocain.jpg" alt="Sculpture" class="w-full h-64 object-cover">
-                <div class="p-4 text-center"><h4 class="text-xl font-semibold">Sculpture</h4></div></a>
-            </article>
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/bijoux marocain 22.jpg" alt="Bijoux" class="w-full h-64 object-cover">
-                <div class="p-4 text-center"><h4 class="text-xl font-semibold">Bijoux</h4></div></a>
-            </article>
-            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/produit marocain.webp" alt="Terroir" class="w-full h-64 object-cover">
-                <div class="p-4 text-center"><h4 class="text-xl font-semibold">Produits du terroir</h4></div></a>
-            </article>
-        </div>
-    </section>
+        <!-- 1. Coopératives -->
+        <li class="flex items-center space-x-3 sm:space-x-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+          <div class="p-2.5 bg-green-500/20 rounded-xl flex-shrink-0">
+            <img src="assets/icons/users.svg" alt="" aria-hidden="true" class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 invert">
+          </div>
+          <div>
+            <strong class="block text-2xl sm:text-3xl font-bold text-green-400">+120</strong>
+            <span class="text-xs sm:text-sm text-gray-200 font-medium">Coopératives</span>
+          </div>
+        </li>
 
-    <!-- COOPÉRATIVES À LA UNE -->
-    <section class="max-w-7xl mx-auto px-4 py-12">
-        <h4 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase">Coopératives à la une</h4>
+        <!-- 2. Artisans -->
+        <li class="flex items-center space-x-3 sm:space-x-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+          <div class="p-2.5 bg-green-500/20 rounded-xl flex-shrink-0">
+            <img src="assets/icons/profile.svg" alt="" aria-hidden="true" class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 invert">
+          </div>
+          <div>
+            <strong class="block text-2xl sm:text-3xl font-bold text-green-400">+1200</strong>
+            <span class="text-xs sm:text-sm text-gray-200 font-medium">Artisans</span>
+          </div>
+        </li>
+
+        <!-- 3. Régions -->
+        <li class="flex items-center space-x-3 sm:space-x-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+          <div class="p-2.5 bg-green-500/20 rounded-xl flex-shrink-0">
+            <img src="assets/images/marqueur.png" alt="" aria-hidden="true" class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 invert">
+          </div>
+          <div>
+            <strong class="block text-2xl sm:text-3xl font-bold text-green-400">12</strong>
+            <span class="text-xs sm:text-sm text-gray-200 font-medium">Régions</span>
+          </div>
+        </li>
+
+        <!-- 4. Produits -->
+        <li class="flex items-center space-x-3 sm:space-x-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+          <div class="p-2.5 bg-green-500/20 rounded-xl flex-shrink-0">
+            <img src="assets/icons/products-cube.svg" alt="" aria-hidden="true" class="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 invert">
+          </div>
+          <div>
+            <strong class="block text-2xl sm:text-3xl font-bold text-green-400">+3500</strong>
+            <span class="text-xs sm:text-sm text-gray-200 font-medium">Produits</span>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>
+   <!--  CATÉGORIES D'ARTISANAT -->
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h3 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase tracking-wide">
+        Nos catégories d'artisanat
+    </h3>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/tapis_marocain.webp" alt="Photo de Tapis" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Tapis</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/poterie_marocain.webp" alt="Photo de Poterie" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Poterie</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/maroquenerie_marocain.webp" alt="Photo de Maroquinerie" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Maroquinerie</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/sculpture_marocain.webp" alt="Photo de Sculpture" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Sculpture</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/bijoux_marocain_22.webp" alt="Photo de Bijoux" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Bijoux</h4>
+                </div>
+            </a>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white">
+            <a href="#" class="block">
+                <img src="assets/images/produit_marocain.webp" alt="Photo Produit de terroir" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 text-center">
+                    <h4 class="text-xl font-semibold text-gray-800">Produits du terroir</h4>
+                </div>
+            </a>
+        </article>
+    </div>
+</section>
+
+<!--  COOPÉRATIVES À LA UNE -->
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <h4 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase tracking-wide">
+        Coopératives à la une
+    </h4>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Coopérative 1 -->
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100">
+            <a href="#" class="block">
+                <img src="assets/images/Tissage_au_maroc.webp" alt="tissage" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5">
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Coopérative d'Atlas</h4>
+                    <p class="text-gray-600">Tissage Traditionnel</p>
+                </div>
+            </a>
+        </article>
+
+        <!-- Coopérative 2 -->
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100">
+            <a href="#" class="block">
+                <img src="assets/images/Poterie_au_maroc.webp" alt="poterie" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5">
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Coopérative Terre & feu</h4>
+                    <p class="text-gray-600">Poterie & Céramique</p>
+                </div>
+            </a>
+        </article>
+
+        <!-- Coopérative 3 -->
+        <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100">
+            <a href="#" class="block">
+                <img src="assets/images/Argan_au_maroc.webp" alt="Argania" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5">
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Coopérative Argania</h4>
+                    <p class="text-gray-600">Huiles & Cosmétiques</p>
+                </div>
+            </a>
+        </article>
+    </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="bg-gray-100 py-12 px-4 my-12">
+    <div class="max-w-7xl mx-auto">
+        <h5 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase tracking-wide">
+            Ce qu'ils disent de nous
+        </h5>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article class="bg-white rounded-xl shadow-md overflow-hidden border hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/Tissage au maroc.jpg" alt="Tissage" class="w-full h-48 object-cover">
-                <div class="p-5"><h4 class="text-xl font-bold">Coopérative d'Atlas</h4><p class="text-gray-600">Tissage Traditionnel</p></div></a>
-            </article>
-            <article class="bg-white rounded-xl shadow-md overflow-hidden border hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/Poterie au maroc.webp" alt="Poterie" class="w-full h-48 object-cover">
-                <div class="p-5"><h4 class="text-xl font-bold">Coopérative Terre & feu</h4><p class="text-gray-600">Poterie & Céramique</p></div></a>
-            </article>
-            <article class="bg-white rounded-xl shadow-md overflow-hidden border hover:shadow-xl transition">
-                <a href="#"><img src="assets/images/Argan au maroc.jpg" alt="Argan" class="w-full h-48 object-cover">
-                <div class="p-5"><h4 class="text-xl font-bold">Coopérative Argania</h4><p class="text-gray-600">Huiles & Cosmétiques</p></div></a>
-            </article>
-        </div>
-    </section>
-
-    <!-- TÉMOIGNAGES -->
-    <section class="bg-gray-100 py-12 px-4 my-12">
-        <div class="max-w-7xl mx-auto">
-            <h5 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 uppercase">Ce qu'ils disent de nous</h5>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm border flex flex-col justify-between">
-                    <p class="text-gray-700 italic mb-4">"Grâce à Taawon, on vend facilement"</p>
-                    <div class="flex items-center space-x-3">
-                        <img src="assets/images/ahmed.jpg" alt="Ahmed" class="w-10 h-10 rounded-full object-cover">
-                        <span class="font-semibold">Ahmed</span>
-                    </div>
+            <!--  1 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-between">
+                <p class="text-gray-700 italic mb-4">"Grâce à Taawon, on vend facilement"</p>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/ahmed.webp" alt="profil d'ahmed" class="w-10 h-10 rounded-full object-cover bg-gray-200">
+                    <p class="font-semibold text-gray-900">- Ahmed</p>
                 </div>
+            </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border flex flex-col justify-between">
-                    <p class="text-gray-700 italic mb-4">"Une poterie magnifique, de très bonne qualité"</p>
-                    <div class="flex items-center space-x-3">
-                        <img src="assets/images/sophie.jpg" alt="Sophie" class="w-10 h-10 rounded-full object-cover">
-                        <span class="font-semibold">Sophie</span>
-                    </div>
+            <!--  2 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-between">
+                <p class="text-gray-700 italic mb-4">"Une poterie magnifique, de très bonne qualité"</p>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/sophie.webp" alt="profil de sophie" class="w-10 h-10 rounded-full object-cover bg-gray-200">
+                    <p class="font-semibold text-gray-900">- Sophie</p>
                 </div>
+            </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border flex flex-col justify-between">
-                    <p class="text-gray-700 italic mb-4">"Une super initiative pour valoriser l'art"</p>
-                    <div class="flex items-center space-x-3">
-                        <img src="assets/images/saad.jpg" alt="Saad" class="w-10 h-10 rounded-full object-cover">
-                        <span class="font-semibold">Saad</span>
-                    </div>
+            <!--  3 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-between">
+                <p class="text-gray-700 italic mb-4">"Une super initiative pour valoriser l'art"</p>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/saad.webp" alt="profil de saad" class="w-10 h-10 rounded-full object-cover bg-gray-200">
+                    <p class="font-semibold text-gray-900">- Saad</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <section bg-gray-50 py-16 px-4 my-12 border-t border-d border-gray-200>
+        <div class="max-w-xl mx-auto text-center">
+    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 uppercase tracking-wide">RESTEZ INFORMER</h3>
+    <p class="text-gray-600 mb-6">incrivez-vous pour recevoir nos dernières actualités</p>
+    <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3">
+    <div class="flex-grow">
 
          <label for="email" class="sr-only">Adress email</label>
     <input type="email" id="email" name="email"
@@ -289,14 +398,13 @@
           <p>Une question ? Notre équipe est à votre écoute.</p>
         </div>
       </div>
-      <div class="bg-emerald-700">
-        <div
-          class="border-t border-gray-500 flex justify-between bg-emerald-700 text-white p-4 mx-6"
-        >
-          <p class="text-xs">© 2026 Taawon. Tous droits réservés.</p>
-          <p class="text-xs">Mentions légales · Confidentialité</p>
-        </div>
+      <div
+        class="border-t border-gray-500 flex justify-between bg-emerald-700 text-white p-4"
+      >
+        <p class="text-xs">© 2026 Taawon. Tous droits réservés.</p>
+        <p class="text-xs">Mentions légales · Confidentialité</p>
       </div>
     </footer>
+    </section>
 </body>
 </html>
