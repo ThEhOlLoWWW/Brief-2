@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="en">
-
-<head>
+<html lang="fr">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Annuaire</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Annuaire - Taawon</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-</head>
-
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
     <header class="sticky top-0 z-50">
       <nav
         class="flex items-center justify-between mt-1 bg-white shadow-md px-5 py-4 sticky z-50 text-base font-medium uppercase tracking-widest"
@@ -107,238 +108,394 @@
       </nav>
     </header>
 
-    <section class="hero bg-amber-50/60 py-16 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-            <div class="hero-content md:w-1/2 space-y-6 text-center md:text-left">
-                <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                    À la rencontre des coopératives
-                </h1>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    Explorez les savoir-faire du Maroc. Derrière chaque création, découvrez une communauté, un
-                    territoire et une histoire à partager.
-                </p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
-                    <p
-                        class="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 font-bold text-amber-700 text-sm">
-                        +150 coopératives</p>
-                    <p
-                        class="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 font-bold text-amber-700 text-sm">
-                        12 régions</p>
-                    <p
-                        class="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 font-bold text-amber-700 text-sm">
-                        Des savoir-faire vivants</p>
-                </div>
-            </div>
+    <!-- HERO SECTION -->
+    <section class="bg-emerald-50 py-16 px-4">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12"
+      >
+        <div class="space-y-6 text-center md:text-left">
+          <h1
+            class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight"
+          >
+            À la rencontre des coopératives
+          </h1>
+          <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">
+            Explorez les savoir-faire du Maroc. Derrière chaque création,
+            découvrez une communauté, un territoire et une histoire à partager.
+          </p>
+          <div
+            class="flex flex-wrap justify-center md:justify-start gap-4 pt-2"
+          >
+            <span
+              class="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 font-bold text-amber-700 text-sm"
+              >+150 coopératives</span
+            >
+            <span
+              class="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 font-bold text-amber-700 text-sm"
+              >12 régions</span
+            >
+            <span
+              class="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 font-bold text-amber-700 text-sm"
+              >Des savoir-faire vivants</span
+            >
+          </div>
         </div>
+      </div>
     </section>
+
+    <!-- SOMMAIRE / FILTRES -->
     <section class="max-w-7xl mx-auto py-10 px-4 text-center">
-
-        <p class="text-lg font-semibold text-gray-700 mb-6">Sommaire — Explorez par savoir-faire</p>
-        <div class="flex fle-wrap justify-center gap-3">
-            <button type="button"
-                class="px-5 py-2.5 rounded-full bg-green-900 text-white font-medium text-sm transition">Toutes les
-                coopératives</button>
-            <button type="button"
-                class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition">Tapis
-                & Tissage</button>
-            <button type="button"
-                class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition">Poterie</button>
-            <button type="button"
-                class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition">Bijoux</button>
-            <button type="button"
-                class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition">Maroquinerie</button>
-            <button type="button"
-                class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition">Bois
-                & Vannerie</button>
-            <button type="button"
-                class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition">Terroir
-                & Broderie</button>
-        </div>
+      <p class="text-lg font-semibold text-gray-700 mb-6">
+        Sommaire — Explorez par savoir-faire
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <button
+          type="button"
+          class="px-5 py-2.5 rounded-full bg-green-900 text-white font-medium text-sm transition"
+        >
+          Toutes les coopératives
+        </button>
+        <button
+          type="button"
+          class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition"
+        >
+          Tapis & Tissage
+        </button>
+        <button
+          type="button"
+          class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition"
+        >
+          Poterie
+        </button>
+        <button
+          type="button"
+          class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition"
+        >
+          Bijoux
+        </button>
+        <button
+          type="button"
+          class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition"
+        >
+          Maroquinerie
+        </button>
+        <button
+          type="button"
+          class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition"
+        >
+          Bois & Vannerie
+        </button>
+        <button
+          type="button"
+          class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-gray-200 font-medium text-sm hover:bg-amber-50 hover:border-amber-300 transition"
+        >
+          Terroir & Broderie
+        </button>
+      </div>
     </section>
 
+    <!-- GRILLE DES 9 COOPÉRATIVES -->
     <section class="max-w-7xl mx-auto py-10 px-4">
-        <p class="text-2xl font-bold text-gray-900 mb-8 text-center md:text-left">9 coopératives à découvrir</p>
-        <div class="grid grid-cols-1 md:grid-cold-2 lg:grid-cols-3 gap-8">
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="cooperative.html" class="block overflow-hidden">
-                    <img src="assets/images/Tissage au maroc.jpg" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Tapis & Tissage</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Atlas</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i> Taznakht · Drâa-Tafilalet</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">Des tapis de laine tissés à la main, où chaque
-                            motif raconte une histoire du Haut Atlas.</p>
-                    </div>
-            </article>
+      <p class="text-2xl font-bold text-gray-900 mb-8 text-center md:text-left">
+        9 coopératives a découvrir
+      </p>
+      <div class="grid grid-cols-1 md:grid-cold-2 lg:grid-cols-3 gap-8">
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/Tissage au maroc.jpg"
+              alt="Photo Cooperatives Atlas"
+              class="w-full h-52 object-cover hover:scale-105 transition duration-300"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Tapis & Tissage</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Atlas
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Taznakht · Drâa-Tafilalet
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                Des tapis de laine tissés à la main, où chaque motif raconte une
+                histoire du Haut Atlas.
+              </p>
+            </div>
+          </div>
+        </article>
 
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/Poterie au maroc.webp" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Poterie</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Terre & Feu</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i>Safi · Marrakech-Safi</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">De la terre au feu, des céramiques façonnées
-                            avec patience pour embellir le quotidien.</p>
-                    </div>
-            </article>
+        <!-- 2. Terre & Feu -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/Poterie au maroc.webp"
+              alt="Terre & Feu"
+              class="w-full h-52 object-cover"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Poterie</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Terre & Feu
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Safi · Marrakech-Safi
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                De la terre au feu, des céramiques façonnées avec patience pour
+                embellir le quotidien.
+              </p>
+            </div>
+          </div>
+        </article>
 
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/Argan au maroc.jpg" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Produits du Terroir</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Argania</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i>Essaouira · Marrakech-Safi</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">Des huiles d'argan et des soins naturels, issus
-                            d'un savoir-faire transmis entre femmes.</p>
-                    </div>
-            </article>
+        <!-- 3. Argania -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/Argan au maroc.jpg"
+              alt="Argania"
+              class="w-full h-52 object-cover"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Produits du Terroir</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Argania
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Essaouira · Marrakech-Safi
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                Des huiles d'argan et des soins naturels, issus d'un
+                savoir-faire transmis entre femmes.
+              </p>
+            </div>
+          </div>
+        </article>
 
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/Bijoux au maroc.jpg" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Bijoux</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Anarouz</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i>Tiznit · Souss-Massa</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">Des bijoux en argent inspirés des symboles
-                            amazighs, entre héritage et création.</p>
-                    </div>
-            </article>
+        <!-- 4. Anarouz -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/Bijoux au maroc.jpg"
+              alt="Anarouz"
+              class="w-full h-52 object-cover"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Bijoux</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Anarouz
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Tiznit · Souss-Massa
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                Des bijoux en argent inspirés des symboles amazighs, entre
+                héritage et création.
+              </p>
+            </div>
+          </div>
+        </article>
 
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/Sculpture au maroc.png" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Sculpture sur Bois</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Cèdre</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i>Azrou · Fès-Meknès</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">Le bois prend vie dans des objets sculptés à la
-                            main au cœur du Moyen Atlas.</p>
-                    </div>
-            </article>
+        <!-- 5. Cèdre -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/Sculpture au maroc.png"
+              alt="Cèdre"
+              class="w-full h-52 object-cover"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Sculpture sur Bois</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Cèdre
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Azrou · Fès-Meknès
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                Le bois prend vie dans des objets sculptés à la main au cœur du
+                Moyen Atlas.
+              </p>
+            </div>
+          </div>
+        </article>
 
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/maroquenerie au maroc.jpg" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Maroquinerie</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Bab Doukkala</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i>Marrakech · Marrakech-Safi</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">Sacs et accessoires en cuir, coupés, cousus et
-                            finis avec soin dans notre atelier.</p>
-                    </div>
-            </article>
+        <!-- 6. Bab Doukkala -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/maroquenerie au maroc.jpg"
+              alt="Bab Doukkala"
+              class="w-full h-52 object-cover"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              -----
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Maroquinerie</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Bab Doukkala
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Marrakech · Marrakech-Safi
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                Sacs et accessoires en cuir, coupés, cousus et finis avec soin
+                dans notre atelier.
+              </p>
+            </div>
+          </div>
+        </article>
 
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/tissage Rif.jpg" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Tapis & Tissage</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Rif Tissage</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i>Chefchaouen · Tanger-Tétouan-Al
-                            Hoceïma</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">Des étoffes et foutas aux couleurs du Rif,
-                            tissées sur des métiers traditionnels.</p>
-                    </div>
-            </article>
+        <!-- 7. Rif Tissage -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/tissage Rif.jpg"
+              alt="Rif Tissage"
+              class="w-full h-52 object-cover"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Tapis & Tissage</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Rif Tissage
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Chefchaouen · Tanger-Tétouan-Al Hoceïma
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                Des étoffes et foutas aux couleurs du Rif, tissées sur des
+                métiers traditionnels.
+              </p>
+            </div>
+          </div>
+        </article>
 
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/Vannerie au maroc.jpg" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Vannerie</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Oasis</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i>Errachidia · Drâa-Tafilalet</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">Des paniers en feuilles de palmier qui font
-                            vivre les gestes des oasis du Sud.</p>
-                    </div>
-            </article>
+        <!-- 8. Oasis -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/Vannerie au maroc.jpg"
+              alt="Oasis"
+              class="w-full h-52 object-cover"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Vannerie</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Oasis
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Errachidia · Drâa-Tafilalet
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                Des paniers en feuilles de palmier qui font vivre les gestes des
+                oasis du Sud.
+              </p>
+            </div>
+          </div>
+        </article>
 
-            <article
-                class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition">
-                <a href="#" class="block overflow-hidden">
-                    <img src="assets/images/Brodrie au maroc.jpg" alt="Photo Cooperatives Atlas"
-                        class="w-full h-52 object-cover hover:scale-105 transition duration-300" />
-                </a>
-                <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
-                    <div>
-                        <p
-                            class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
-                            Broderie</p>
-                        <h4 class=" text-xl font-bold text-gray-900 mt-2">Coopérative Broderies de Salés</h4>
-                        <p class="text-sm text-gray-500 mt-1"><i
-                                class="fa-solid fa-location-dot text-amber-600 mr-1"></i>Salé · Rabat-Salé-Kénitra</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">Des broderies aux fils de soie qui font revivre
-                            le patrimoine raffiné et l'élégance de la médina de Salé.</p>
-                    </div>
-            </article>
+        <!-- 9. Broderies de Salé -->
+        <article
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition"
+        >
+          <a href="#" class="block overflow-hidden">
+            <img
+              src="assets/images/Brodrie au maroc.jpg"
+              alt="Broderies de Salé"
+              class="w-full h-52 object-cover"
+            />
+          </a>
+          <div class="p-6 flex flex-col flex-1 justify-between space-y-3">
+            <div>
+              <span
+                class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block"
+                >Broderie</span
+              >
+              <h4 class="text-xl font-bold text-gray-900 mt-2">
+                Coopérative Broderies de Salé
+              </h4>
+              <p class="text-sm text-gray-500 mt-1">
+                <i class="fa-solid fa-location-dot text-amber-600 mr-1"></i>
+                Salé · Rabat-Salé-Kénitra
+              </p>
+              <p class="text-gray-600 text-sm leading-relaxed mt-2">
+                Des broderies aux fils de soie qui font revivre le patrimoine
+                raffiné et l'élégance de la médina de Salé.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <div class="max-w-7xl mx-auto py-10 px-4 text-center">
-        <p class="text-lg font-semibold text-gray-700 mb-6 ">Vous avez découvert les 9 coopératives de cette sélection.
-        </p>
+    <!-- MESSAGE DE FIN -->
+    <div class="max-w-7xl mx-auto py-6 px-4 text-center">
+      <p class="text-lg font-semibold text-gray-700">
+        Vous avez découvert les 9 coopératives de cette sélection.
+      </p>
     </div>
-
-
-
     <footer>
       <div class="grid grid-cols-3 bg-emerald-700 px-5 py-5 text-white">
         <div class="flex flex-col gap-2">
@@ -378,6 +535,5 @@
         </div>
       </div>
     </footer>
-</body>
-
+  </body>
 </html>
